@@ -1,11 +1,14 @@
 <div class="modal-overlay">
-<div class="container work-modal">
-<h4>
-{{content.title}}
-</h4>
-<div class="info">
-{{content.info}}
-</div>
-<img src="{{ content.image }}">
-</div>
+	<div class="container work-modal">
+		<div class="col-md-2"></div>
+		<img src="{{ content.image }}" class="col-md-4">
+		<div class="col-md-4 work-modal-text">
+			<div ng-click="dynamicLoad(NULL, NULL, NULL, 'workmodal'); remove(content)" class="glyphicon glyphicon-remove-circle close"></div>
+			<h4>
+				{{content.title}}
+			</h4>
+			<div btf-markdown="content.info"></div>
+		</div>
+		<div class="col-md-2"></div>
+	</div>
 </div>
